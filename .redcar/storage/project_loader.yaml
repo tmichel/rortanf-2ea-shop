@@ -1,8 +1,0 @@
---- 
-open_files: 
-  - Gemfile
-  - db/migrate/20120228205525_create_products.rb
-  - app/models/product.rb
-  - db/migrate/20120228210220_add_stock_to_product.rb
-  - app/models/review.rb
-  - app/models/user.rb

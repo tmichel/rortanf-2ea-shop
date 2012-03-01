@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  # attributes: name, price, stock
+  
   validates :name, :presence => true, :length => { :minimum => 5}
   
   before_save :default_values
@@ -8,7 +10,7 @@ class Product < ActiveRecord::Base
   has_many :purchases
   has_many :users, :through => :purchases
   
-  scope :expensive, where("price > 5")
+  scope :expensive, where("price > 100")
   scope :recent, where("created_at > ?", 10.minutes.ago)
   
   def default_values
