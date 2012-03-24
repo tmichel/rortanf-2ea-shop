@@ -1,4 +1,10 @@
 Shop::Application.routes.draw do
+  root :to => "home#index"
+  resources :products do
+    resources :order
+  end
+  get 'home/hello'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
